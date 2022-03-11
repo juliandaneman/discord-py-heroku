@@ -6,7 +6,7 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 
 @bot.event
 async def on_ready():
-    await ctx.send(f"Logged in as {bot.user.name}({bot.user.id})")
+    print(f"Logged in as {bot.user.name}({bot.user.id})")
 
 @bot.command()
 async def ping(ctx):
