@@ -8,6 +8,9 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 async def on_ready():
     print(f"Logged in as {bot.user.name}({bot.user.id})")
 
+async def on_message(message):
+    await message.channel.send('ping')
+    
 @bot.command()
 async def ping(ctx):
     await ctx.send("pong")
