@@ -16,15 +16,3 @@ async def ping(ctx):
 if __name__ == "__main__":
     bot.run(TOKEN)
     
-client = discord.Client()   
-
-@client.event
-async def on_message(message):
-
-  capsMess = message.content.upper()
-  
-  if message.author == client.user:
-    return
-  
-  if capsMess.find('HEY SHITBAG')>0 or capsMess.startswith('HEY SHITBAG'):
-    await message.channel.send('FUCK YOU BITCH')
